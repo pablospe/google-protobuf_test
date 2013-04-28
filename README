@@ -1,0 +1,8 @@
+
+
+(protoc -I=$SRC_DIR --cpp_out=$DST_DIR $SRC_DIR/addressbook.proto)
+> protoc -I=./ --cpp_out=. test.proto
+> g++ test.cpp test.pb.cc  -o test `pkg-config protobuf --cflags --libs`
+
+
+https://developers.google.com/protocol-buffers/docs/cpptutorial
